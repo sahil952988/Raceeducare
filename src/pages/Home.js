@@ -8,7 +8,7 @@ const Home = () => {
 
       <div className=" flex ">
         <div className="left_side w-[50%] xl:ml-28 ml-10">
-          <p className='text-[40px] font-bold xl:mr-[600px] mb-10 mt-[150px] text-white'>We are coming Soon</p>
+          <p className='text-[40px] font-bold xl:mr-[500px] mb-10 mt-[150px] text-white'>We are coming Soon</p>
 
           <p className='text-[20px] font-semibold xl:mr-[200px] mr-[100px] font-sans text-white'>Welcome to Study in Ireland from Nepal
             We specialize in helping students from Nepal achieve their dream of studying in Ireland. With our expert guidance and support, you can make your journey smooth and successful.</p>
@@ -35,7 +35,7 @@ const Home = () => {
         </div>
 
         <div className="right mb-10">
-          <img className='rounded-[8px] w-[550px] mt-[100px]' src={edu} alt="" />
+          <img className='rounded-[8px] w-[500px] mt-[100px]' src={edu} alt="" />
         </div>
       </div>
 
