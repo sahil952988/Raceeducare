@@ -12,6 +12,12 @@ body {
   height: 800px;
 }
 
-input {
-  color: black;
+@media only screen and (max-width: 640px) {
+  body {
+    background-image: url('./Assets//bg-img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1300px;
+  }
 }
