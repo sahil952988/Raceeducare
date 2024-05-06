@@ -27,7 +27,7 @@ const Home = () => {
 
           <div className="contact flex justify-center space-x-5 mt-5">
             <div className="watsap">
-              <a href="#"><p className=' text-[30px] text-white'><i class="fa-brands fa-whatsapp"></i></p></a>
+              <a href="https://wa.me/+9779803100720" target='_blank'><p className=' text-[30px] text-white'><i class="fa-brands fa-whatsapp"></i></p></a>
             </div>
 
             <div className="facebook">
