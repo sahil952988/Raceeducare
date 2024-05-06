@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <div className="all_items">
         <div className="  ">
-          <p className='sm:text-[32px] text-center text-[20px] ml-5
+          <p className=' topheading sm:text-[40px] text-center text-[20px] ml-5
        text-white  mt-10 font-semibold '>Study In Ireland By Race Educare</p>
         </div>
       </div >

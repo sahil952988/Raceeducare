@@ -11,7 +11,7 @@ const Home = () => {
       <div className=" items-center ">
         <div className="left_side ml-5 mr-3">
 
-          <p className='topheading text-[40px] font-bold mt-5 text-white text-center'>We are coming Soon</p>
+          <p className=' text-[40px] font-bold mt-5 text-white text-center'>We are coming Soon</p>
 
           <p className='text-[20px] font-semibold font-sans text-white text-centre
           2xl:ml-[500px] lg:ml-[180px] sm:ml-[100px] 2xl:mr-[500px] lg:mr-[150px] sm:mr-[100px] mt-5'>Welcome to Study in Ireland from Nepal
@@ -43,7 +43,7 @@ const Home = () => {
           <div className="flex justify-center mt-3">
             <button className="apply_btn flex  pl-3 py-2  text-white bg-green-400 space-x-3 pr-2 rounded-[7px]">
               <p className=' text-[20px]sm:mr-40 cursor-pointer text-center'><NavLink to='/Apply'>Apply Now</NavLink></p>
-              <p><i class="fa-brands fa-telegram"></i></p>
+              <NavLink to='/Apply'><p><i class="fa-brands fa-telegram"></i></p></NavLink>
             </button>
           </div>
 

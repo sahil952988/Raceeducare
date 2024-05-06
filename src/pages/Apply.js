@@ -1,4 +1,3 @@
-import Header from "../components/Header"
 
 const Apply = () => {
   return (
@@ -8,12 +7,6 @@ const Apply = () => {
           <p className='sm:text-[32px] text-center text-[20px] ml-5
        text-white  mt-10 font-bold '>Study In Ireland By Race Educare</p>
         </div>
-
-        {/* <button className="apply_btn flex pl-3 py-2 text-white bg-green-400 space-x-3 pr-2 rounded-[7px]">
-          <p className=' text-[20px]sm:mr-40 cursor-pointer text-center'><NavLink to='/Apply'>Apply Now</NavLink></p>
-          <p><i class="fa-brands fa-telegram"></i></p>
-        </button> */}
-
       </div >
 
       <div className="all_items">
