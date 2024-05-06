@@ -61,7 +61,7 @@ const Apply = () => {
             </div>
           </div>
 
-          <div className="course flex space-x-10">
+          <div className="course flex ml-5 space-x-10">
             <div className="course">
               <p>Preferred Course:</p>
               <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black">
