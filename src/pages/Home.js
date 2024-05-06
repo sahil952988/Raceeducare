@@ -2,8 +2,6 @@ import React from 'react'
 import logo from "../Assets/logo.jpg"
 import { NavLink } from 'react-router-dom'
 
-
-
 const Home = () => {
   return (
     <>
