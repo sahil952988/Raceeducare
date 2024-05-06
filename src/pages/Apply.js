@@ -1,6 +1,5 @@
 import Header from "../components/Header"
-import { NavLink } from "react-router-dom"
-import logo from "../Assets/logo.jpg"
+
 const Apply = () => {
   return (
     <>
@@ -34,22 +33,14 @@ const Apply = () => {
             </div>
           </div>
 
-          <div className="number">
-            <input type="text" />
-          </div>
-
           <div className="university & year md:flex md:mx-5 md:space-x-5">
+            <div className="number">
+              <p>Contact Number</p>
+              <input className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter a phone number" />
+            </div>
             <div className="university">
               <p>Preferred University:</p>
               <input className="md:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="Enter Your University" />
-            </div>
-
-            <div className="year">
-              <p>Preferred Year:</p>
-              <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black">
-                <option>2024</option>
-                <option>2025</option>
-              </select>
             </div>
           </div>
 
@@ -61,7 +52,16 @@ const Apply = () => {
                 <option>Sept</option>
               </select>
             </div>
+            <div className="year">
+              <p>Preferred Year:</p>
+              <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black">
+                <option>2024</option>
+                <option>2025</option>
+              </select>
+            </div>
+          </div>
 
+          <div className="course flex space-x-10">
             <div className="course">
               <p>Preferred Course:</p>
               <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black">
@@ -71,13 +71,13 @@ const Apply = () => {
                 <option>Nursing</option>
               </select>
             </div>
+
+            <div className="photo md:mx-5 mt-3 ">
+              <p>Upload file</p>
+              <input type="file" id="myFile" name="filename" />
+            </div>
           </div>
 
-
-          <div className="photo md:mx-5">
-            <p>Upload file</p>
-            <input type="file" id="myFile" name="filename" />
-          </div>
 
           <button className="ml-5 mt-3 bg-green-500 px-3 py-2 rounded-[8px]">Submit</button>
         </form>
