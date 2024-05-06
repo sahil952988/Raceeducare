@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 
+.topsheading {
+  font-family: "Alegreya", serif;
+}
 
 body {
-  background-image: url('./Assets//bg-img.jpg');
+  background-image: url('./Assets/logo2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +17,7 @@ body {
 
 @media only screen and (max-width: 640px) {
   body {
-    background-image: url('./Assets//bg-img.jpg');
+    background-image: url('./Assets/logo2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

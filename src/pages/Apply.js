@@ -4,12 +4,18 @@ import logo from "../Assets/logo.jpg"
 const Apply = () => {
   return (
     <>
-      <div className=" sm:flex justify-between ">
-        <img className='rounded-full lg:w-32 sm:w-20 w-36 h-36  lg:ml-28 sm:ml-16 ml-5 mt-5' src={logo} alt="" />
-        <p className='sm:text-[32px] text-[20px] ml-5
-       text-white  mt-10 font-semibold '>Study In Ireland By Race Educare</p>
-        <p className='text-white text-[20px] sm:mr-40 mt-10 cursor-pointer text-center'><NavLink to='/Apply'>Apply</NavLink></p>
-      </div>
+      <div className="all_items ">
+        <div className=".topic  ">
+          <p className='sm:text-[32px] text-center text-[20px] ml-5
+       text-white  mt-10 font-bold '>Study In Ireland By Race Educare</p>
+        </div>
+
+        {/* <button className="apply_btn flex pl-3 py-2 text-white bg-green-400 space-x-3 pr-2 rounded-[7px]">
+          <p className=' text-[20px]sm:mr-40 cursor-pointer text-center'><NavLink to='/Apply'>Apply Now</NavLink></p>
+          <p><i class="fa-brands fa-telegram"></i></p>
+        </button> */}
+
+      </div >
 
       <div className="all_items">
         <p className="text-center  text-white text-[40px] font-bold">Start Your Journey</p>
