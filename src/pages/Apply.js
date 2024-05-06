@@ -20,15 +20,15 @@ const Apply = () => {
     <>
       <div className="all_items ">
         <div className=".topic  ">
-          <p className='sm:text-[32px] text-center text-[20px] ml-5
+          <p className='topheading sm:text-[32px] text-center text-[20px] ml-5
        text-white  mt-10 font-bold '>Study In Ireland By Race Educare</p>
         </div>
       </div >
 
       <div className="all_items">
-        <p className="text-center  text-white text-[40px] font-bold">Start Your Journey</p>
+        <p className="text-center  text-white text-[40px] font-bold mt-10">Start Your Journey</p>
 
-        <form onSubmit={handleSubmit} className=" mt-20 space-y-4 bg-white mr-auto ml-auto w-fit px-10 py-10 rounded-[8px]">
+        <form onSubmit={handleSubmit} className=" mt-5 space-y-4 bg-white mr-auto ml-auto w-fit px-10 py-10 rounded-[8px]">
 
           <div className="name & email md:flex md:space-x-5 mr-5">
             <div className="name sm:pl-5">
