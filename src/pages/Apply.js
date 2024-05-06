@@ -34,7 +34,9 @@ const Apply = () => {
             </div>
           </div>
 
-
+          <div className="number">
+            <input type="text" />
+          </div>
 
           <div className="university & year md:flex md:mx-5 md:space-x-5">
             <div className="university">
@@ -47,11 +49,6 @@ const Apply = () => {
               <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black">
                 <option>2024</option>
                 <option>2025</option>
-                <option>2026</option>
-                <option>2027</option>
-                <option>2028</option>
-                <option>2029</option>
-                <option>2030</option>
               </select>
             </div>
           </div>
@@ -60,10 +57,8 @@ const Apply = () => {
             <div className="intake">
               <p>Preferred Intake:</p>
               <select className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black">
-                <option>Jan-March</option>
-                <option>April-May</option>
-                <option>June-July</option>
-                <option>Sept-Dec</option>
+                <option>Feb</option>
+                <option>Sept</option>
               </select>
             </div>
 

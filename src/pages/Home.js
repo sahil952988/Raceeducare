@@ -14,7 +14,7 @@ const Home = () => {
           <p className='topheading text-[40px] font-bold mt-5 text-white text-center'>We are coming Soon</p>
 
           <p className='text-[20px] font-semibold font-sans text-white text-centre
-          ml-[500px] mr-[500px] mt-5'>Welcome to Study in Ireland from Nepal
+          2xl:ml-[500px] lg:ml-[180px] sm:ml-[100px] 2xl:mr-[500px] lg:mr-[150px] sm:mr-[100px] mt-5'>Welcome to Study in Ireland from Nepal
             We specialize in helping students from Nepal achieve their dream of studying in Ireland. With our expert guidance and support, you can make your journey smooth and successful.</p>
           <div className="logo mt-5 flex justify-center">
             <img className='rounded-full w-40' src={logo} alt="" />
