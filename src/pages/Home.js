@@ -35,7 +35,7 @@ const Home = () => {
             </div>
 
             <div className="email space-x-5 flex">
-              <p className='text-[30px] text-white'><i class="fa-solid fa-envelope"></i> </p><p className='sm:text-[16px] text-[12px] text-white mt-3 hover:text-black cursor-pointer'><i>admissions@studyinireland.info</i></p>
+              <p className='text-[30px] text-white'><i class="fa-solid fa-envelope"></i> </p><p className='sm:text-[16px] text-[12px] text-white mt-3  cursor-pointer'><i>admissions@studyinireland.info</i></p>
             </div>
 
           </div>
