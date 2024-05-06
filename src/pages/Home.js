@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../Assets/logo.jpg"
+import shammer from "../Assets/shamrock.jpg"
 import { NavLink } from 'react-router-dom'
 
 const Home = () => {
@@ -12,8 +13,10 @@ const Home = () => {
           <p className=' text-[40px] font-bold mt-5 text-white text-center'>We are coming Soon</p>
 
           <p className='text-[20px] font-semibold font-sans text-white text-centre
-          2xl:ml-[500px] lg:ml-[180px] sm:ml-[100px] 2xl:mr-[500px] lg:mr-[150px] sm:mr-[100px] mt-5'>Welcome to Study in Ireland from Nepal
-            We specialize in helping students from Nepal achieve their dream of studying in Ireland. With our expert guidance and support, you can make your journey smooth and successful.</p>
+           mt-5'><p className='text-center'>☘️Welcome to Study in Ireland from Nepal.</p>
+            <p className='text-center'>☘️We specialize in helping students from Nepal achieve their dream of studying in Ireland. </p>
+            <p className='text-center'>☘️With our expert guidance and support, you can make your journey smooth and successful.</p>
+          </p>
           <div className="logo mt-5 flex justify-center">
             <img className='rounded-full w-40' src={logo} alt="" />
           </div>
@@ -39,10 +42,10 @@ const Home = () => {
           </div>
 
           <div className="flex justify-center mt-3">
-            <button className="apply_btn flex  pl-3 py-2  text-white bg-green-400 space-x-3 pr-2 rounded-[7px]">
-              <p className=' text-[20px]sm:mr-40 cursor-pointer text-center'><NavLink to='/Apply'>Apply Now</NavLink></p>
-              <NavLink to='/Apply'><p><i class="fa-brands fa-telegram"></i></p></NavLink>
-            </button>
+            <NavLink to='/Apply'><button className="apply_btn flex  pl-3 py-2  text-white bg-green-400 space-x-3 pr-2 rounded-[7px]">
+              <p className=' text-[20px]sm:mr-40 cursor-pointer text-center'>Apply Now</p>
+              <p><i class="fa-brands fa-telegram"></i></p>
+            </button></NavLink>
           </div>
 
         </div>
