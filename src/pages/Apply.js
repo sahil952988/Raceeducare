@@ -71,20 +71,21 @@ const Apply = () => {
           </div>
 
           <div className="intake & course  md:flex md:mx-5 md:space-x-5">
-            <div className="intake">
-              <p>Preferred Intake:</p>
-              <select value={intake} onChange={(e) => setIntake(e.target.value)} className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-                <option>Intake</option>
-                <option>Feburary</option>
-                <option>September</option>
-              </select>
-            </div>
             <div className="year">
               <p>Preferred Year:</p>
               <select value={year} onChange={(e) => setYear(e.target.value)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
                 <option>Year</option>
                 <option>2024</option>
                 <option>2025</option>
+              </select>
+            </div>
+
+            <div className="intake">
+              <p>Preferred Intake:</p>
+              <select value={intake} onChange={(e) => setIntake(e.target.value)} className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+                <option>Intake</option>
+                <option>Feburary</option>
+                <option>September</option>
               </select>
             </div>
           </div>
