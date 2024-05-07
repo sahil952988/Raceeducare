@@ -1,5 +1,6 @@
 {
   "name": "landingpage",
+  "homepage": "https://studyinireland.info/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

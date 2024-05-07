@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Independentcollege from "../components/courses/Independentcollege"
+import CCTcollege from "../components/courses/CCTcollege"
 
 const Apply = () => {
 
@@ -8,14 +10,23 @@ const Apply = () => {
   const [university, setUniversity] = useState("")
   const [year, setYear] = useState("")
   const [intake, setIntake] = useState("")
-  const [course, setCourse] = useState("")
+
   const [level, setLevel] = useState("")
   const [photo, setPhoto] = useState("")
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log({ name, email, phone, university, year, intake, course, level })
+    console.log({ name, email, phone, university, year, intake, level })
   };
+
+
+  const [selected, setSelected] = useState('independentCollege')
+
+
+  const handleChange = (e) => {
+    console.log(e.target.value)
+    setSelected(e.target.value)
+  }
   return (
     <>
       <div className="all_items ">
@@ -80,6 +91,7 @@ const Apply = () => {
 
             <div className="university">
               <p>Preferred University:</p>
+
               <select value={university} onChange={(e) => setUniversity(e.target.value)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
                 <option>University</option>
                 <option>Independent College</option>
@@ -90,11 +102,11 @@ const Apply = () => {
 
             <div className="course">
               <p>Preferred Course:</p>
-              <select value={course} onChange={(e) => setCourse(e.target.value)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+              <select value={selected} onChange={(e) => handleChange(e)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+
                 <option>course</option>
-                <option>Bachelor of Arts (Hons) in International Business</option>
-                <option>Bachelor of Arts (Hons) in Accounting and Finance</option>
-                <option>Bachelor of Arts (Hons) in Business Studies</option>
+                <option> {selected == "independentCollege" ? <Independentcollege /> : ""}</option>
+                <option> {selected == "CCTcollege" ? <CCTcollege /> : ""}</option>
                 <option>
                   Master of Arts in Dispute Resolution
                 </option>
