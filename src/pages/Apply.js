@@ -3,13 +3,11 @@ import Independentcollege from "../components/courses/Independentcollege"
 import CCTcollege from "../components/courses/CCTcollege"
 import Mynooth from "../components/courses/Mynooth"
 
-
 const Apply = () => {
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
-  const [university, setUniversity] = useState("")
   const [year, setYear] = useState("")
   const [intake, setIntake] = useState("")
 
@@ -18,7 +16,7 @@ const Apply = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log({ name, email, phone, university, year, intake, level })
+    console.log({ name, email, phone, year, intake, level })
   };
 
 
@@ -29,6 +27,8 @@ const Apply = () => {
     console.log(e.target.value)
     setSelected(e.target.value)
   }
+
+  const [show, setShow] = useState(true)
   return (
     <>
       <div className="all_items ">
@@ -93,17 +93,29 @@ const Apply = () => {
 
             <div className="university">
               <p>Preferred University:</p>
-
               <select value={selected} onChange={(e) => handleChange(e)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
 
-                <option>Independent College</option>
-                <option>CCT college Dublin</option>
-                <option>Maynooth University</option>
+                <option onClick={() => setShow(true)} value="">University</option>
+                <option onClick={() => setShow(false)}>Independent College</option>
+                <option onClick={() => setShow(false)}>CCT college Dublin</option>
+                <option onClick={() => setShow(false)}>Maynooth University</option>
               </select>
             </div>
 
             <div className="course">
               <p>Preferred Course:</p>
+
+              {
+                show ?
+                  <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" name="" id="">
+                    <option value="">
+                      <h1>Course</h1>
+                    </option>
+                  </select>
+                  : null
+              }
+
+
               {selected == "Independent College" ? <Independentcollege /> : ""}
               {selected == "CCT college Dublin" ? <CCTcollege /> : ""}
               {selected == "Maynooth University" ? <Mynooth /> : ""}
