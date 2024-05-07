@@ -12,7 +12,8 @@ const CCTcollege = () => {
         <option>Higher Diploma in Science in Cybersecutiy</option>
         <option>MA in International Business</option>
         <option>Certificate in Digital Transversal Skill</option>
-        <option>Diploma in Artificial Intelligence and Working into the Future</option></select>
+        <option>Diploma in Artificial Intelligence and Working into the Future</option>
+      </select>
 
     </>
   )

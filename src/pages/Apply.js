@@ -1,6 +1,8 @@
 import { useState } from "react"
 import Independentcollege from "../components/courses/Independentcollege"
 import CCTcollege from "../components/courses/CCTcollege"
+import Mynooth from "../components/courses/Mynooth"
+
 
 const Apply = () => {
 
@@ -92,8 +94,8 @@ const Apply = () => {
             <div className="university">
               <p>Preferred University:</p>
 
-              <select value={university} onChange={(e) => setUniversity(e.target.value)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-                <option>University</option>
+              <select value={selected} onChange={(e) => handleChange(e)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+
                 <option>Independent College</option>
                 <option>CCT college Dublin</option>
                 <option>Maynooth University</option>
@@ -102,15 +104,9 @@ const Apply = () => {
 
             <div className="course">
               <p>Preferred Course:</p>
-              <select value={selected} onChange={(e) => handleChange(e)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-
-                <option>course</option>
-                <option> {selected == "independentCollege" ? <Independentcollege /> : ""}</option>
-                <option> {selected == "CCTcollege" ? <CCTcollege /> : ""}</option>
-                <option>
-                  Master of Arts in Dispute Resolution
-                </option>
-              </select>
+              {selected == "Independent College" ? <Independentcollege /> : ""}
+              {selected == "CCT college Dublin" ? <CCTcollege /> : ""}
+              {selected == "Maynooth University" ? <Mynooth /> : ""}
             </div>
           </div>
 
