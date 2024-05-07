@@ -2,6 +2,7 @@ import { useState } from "react"
 import Independentcollege from "../components/courses/Independentcollege"
 import CCTcollege from "../components/courses/CCTcollege"
 import Mynooth from "../components/courses/Mynooth"
+import Dundalk from "../components/courses/Dundalk"
 
 const Apply = () => {
 
@@ -100,6 +101,7 @@ const Apply = () => {
                 <option onClick={() => setShow(false)}>Independent College</option>
                 <option onClick={() => setShow(false)}>CCT college Dublin</option>
                 <option onClick={() => setShow(false)}>Maynooth University</option>
+                <option onClick={() => setShow(false)}>Dundalk Institute of Technology</option>
               </select>
             </div>
 
@@ -115,11 +117,10 @@ const Apply = () => {
                   </select>
                   : null
               }
-
-
               {selected == "Independent College" ? <Independentcollege /> : ""}
               {selected == "CCT college Dublin" ? <CCTcollege /> : ""}
               {selected == "Maynooth University" ? <Mynooth /> : ""}
+              {selected == "Dundalk Institute of Technology" ? <Dundalk /> : ""}
             </div>
           </div>
 
