@@ -3,6 +3,8 @@ import Independentcollege from "../components/courses/Independentcollege"
 import CCTcollege from "../components/courses/CCTcollege"
 import Mynooth from "../components/courses/Mynooth"
 import Dundalk from "../components/courses/Dundalk"
+import { toast } from "react-toastify"
+import axios from "axios"
 
 const Apply = () => {
 
@@ -11,15 +13,33 @@ const Apply = () => {
   const [phone, setPhone] = useState("")
   const [year, setYear] = useState("")
   const [intake, setIntake] = useState("")
-
   const [level, setLevel] = useState("")
-  const [photo, setPhoto] = useState("")
+  const [university, setUniversity] = useState("")
+  const [course, setCourse] = useState("")
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log({ name, email, phone, year, intake, level })
+    try {
+      const res = await axios.post("/api/auth/apply", {
+        name,
+        email,
+        phone,
+        level,
+        intake,
+        year,
+        university,
+        course
+      });
+      if (res && res.data.success) {
+        toast.success(res.data && res.data.message);
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
   };
-
 
   const [selected, setSelected] = useState('independentCollege')
 
@@ -32,12 +52,6 @@ const Apply = () => {
   const [show, setShow] = useState(true)
   return (
     <>
-      <div className="all_items ">
-        <div className=".topic  ">
-          <p className='topheading sm:text-[32px] text-center text-[20px] ml-5
-       text-white  mt-10 font-bold '>Study In Ireland By Race Educare</p>
-        </div>
-      </div >
 
       <div className="all_items">
         <p className="text-center  text-white text-[40px] font-bold mt-10">Start Your Journey</p>
@@ -47,7 +61,7 @@ const Apply = () => {
           <div className="name & email md:flex md:space-x-5 mr-5">
             <div className="name sm:pl-5">
               <p>Full Name:</p>
-              <input req value={name} onChange={(e) => setName(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter name" />
+              <input required value={name} onChange={(e) => setName(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter name" />
             </div>
 
             <div className="email ">
@@ -93,7 +107,7 @@ const Apply = () => {
 
           <div className="course md:flex md:mx-5 md:space-x-5">
 
-            <div className="university">
+            <div value={university} onChange={(e) => setUniversity(e.target.value)} className="university">
               <p>Preferred University:</p>
               <select value={selected} onChange={(e) => handleChange(e)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
 
@@ -117,16 +131,19 @@ const Apply = () => {
                   </select>
                   : null
               }
-              {selected == "Independent College" ? <Independentcollege /> : ""}
-              {selected == "CCT college Dublin" ? <CCTcollege /> : ""}
-              {selected == "Maynooth University" ? <Mynooth /> : ""}
-              {selected == "Dundalk Institute of Technology" ? <Dundalk /> : ""}
+              <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "Independent College" ? <Independentcollege /> : ""}</div>
+              <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "CCT college Dublin" ? <CCTcollege /> : ""}</div>
+
+              <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Maynooth University" ? <Mynooth /> : ""}</div>
+
+              <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Dundalk Institute of Technology" ? <Dundalk /> : ""}</div>
+
             </div>
           </div>
 
           <div className="photo md:mx-5 mt-3 ">
             <p>Upload file</p>
-            <input value={photo} onChange={(e) => setPhoto(e.target.value)} type="file" id="myFile" name="filename" />
+            <input type="file" id="myFile" name="filename" />
           </div>
 
           <button className="ml-5 mt-3 bg-green-500 px-3 py-2 rounded-[8px]">Submit</button>

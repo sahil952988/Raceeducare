@@ -1,12 +1,15 @@
+import { ToastContainer } from "react-toastify"
+import Router from "../Routers/Router"
 import Header from "../components/Header"
-import Home from "../pages/Home"
+
 
 
 const Layout = () => {
   return (
     <>
       <Header />
-      <Home />
+      <Router />
+      <ToastContainer />
     </>
 
   )
