@@ -23,7 +23,7 @@ const Home = () => {
 
           <form className='space-x-5 mt-10 flex justify-center'>
             <input className='outline-none pl-5 sm:w-[400px] border-2 border-black h-10' type="email" placeholder='enter email' required />
-            <button type='submit' className='bg-green-400 px-3 py-2 hover:bg-black hover:text-white'>Sumbit</button>
+            <button type='submit' className='bg-green-400 px-3 py-2 hover:bg-black hover:text-white rounded-[7px] text-white font-semibold'>Sumbit</button>
           </form>
 
           <div className="contact flex justify-center space-x-5 mt-5">
@@ -43,7 +43,7 @@ const Home = () => {
 
           <div className="flex justify-center mt-3">
             <NavLink to='/Apply'><button className="apply_btn flex  pl-3 py-2  text-white bg-green-400 space-x-3 pr-2 rounded-[7px]">
-              <p className=' text-[20px]sm:mr-40 cursor-pointer text-center'>Apply Now</p>
+              <p className=' text-[20px]sm:mr-40 cursor-pointer text-center font-semibold'>Apply Now</p>
               <p><i class="fa-brands fa-telegram"></i></p>
             </button></NavLink>
           </div>

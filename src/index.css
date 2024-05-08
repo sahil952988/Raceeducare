@@ -27,3 +27,9 @@ body {
     height: 1300px;
   }
 }
+
+::placeholder {
+  color: red;
+  opacity: 1;
+  /* Firefox */
+}
