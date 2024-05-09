@@ -2,34 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
 .topheading {
   font-family: "Sedan SC", serif;
   font-weight: 400;
   font-style: normal;
-
 }
 
-body {
+/* body {
   background-image: url('./Assets/logo2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
+} */
+
+video {
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-@media only screen and (max-width: 640px) {
-  body {
-    background-image: url('./Assets/logo2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1300px;
-  }
+.left_side {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 ::placeholder {
   color: red;
   opacity: 1;
   /* Firefox */
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

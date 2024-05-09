@@ -1,29 +1,25 @@
 import React from 'react'
 import logo from "../Assets/logo.jpg"
-import shammer from "../Assets/shamrock.jpg"
 import { NavLink } from 'react-router-dom'
+import bgvideo from "../Assets/Ireland  - The Making of  You.mp4"
+import Header from '../components/Header'
 
 const Home = () => {
   return (
     <>
 
       <div className=" items-center ">
-        <div className="left_side ml-5 mr-3">
+        <div className="left_side ml-5 mr-3  flex flex-col justify-center">
+          <Header />
+          <p className='mt-10 text-[40px] font-bold  text-white text-center'>Our Website is coming Soon</p>
 
-          <p className=' text-[40px] font-bold mt-5 text-white text-center'>We are coming Soon</p>
-
-          <p className='text-[20px] font-semibold font-sans text-white text-centre
-           mt-5'><p className='text-center'>☘️Welcome to Study in Ireland from Nepal.</p>
-            <p className='text-center'>☘️We specialize in helping students from Nepal achieve their dream of studying in Ireland. </p>
-            <p className='text-center'>☘️With our expert guidance and support, you can make your journey smooth and successful.</p>
-          </p>
           <div className="logo mt-5 flex justify-center">
             <img className='rounded-full w-40' src={logo} alt="" />
           </div>
 
           <form className='space-x-5 mt-10 flex justify-center'>
-            <input className='outline-none pl-5 sm:w-[400px] border-2 border-black h-10' type="email" placeholder='enter email' required />
-            <button type='submit' className='bg-green-400 px-3 py-2 hover:bg-black hover:text-white rounded-[7px] text-white font-semibold'>Sumbit</button>
+            <input className='outline-none pl-5 h-[50px] sm:w-[500px] border-2 border-black ' type="email" placeholder='enter email' required />
+            <button type='submit' className='bg-[#7faa2c] px-3 py-2 hover:bg-black text-[20px] hover:text-white rounded-[7px] text-white font-semibold'>Sumbit</button>
           </form>
 
           <div className="contact flex justify-center space-x-5 mt-5">
@@ -42,14 +38,18 @@ const Home = () => {
           </div>
 
           <div className="flex justify-center mt-3">
-            <NavLink to='/Apply'><button className="apply_btn flex  pl-3 py-2  text-white bg-green-400 space-x-3 pr-2 rounded-[7px]">
+            <NavLink to='/Apply'><button className="apply_btn flex  pl-3 py-2  text-white text-[20px] bg-[#7faa2c] space-x-3 pr-2 rounded-[7px]">
               <p className=' text-[20px]sm:mr-40 cursor-pointer text-center font-semibold'>Apply Now</p>
               <p><i class="fa-brands fa-telegram"></i></p>
             </button></NavLink>
           </div>
 
         </div>
-      </div>
+
+        <video className='videoTag' autoPlay loop muted>
+          <source src={bgvideo} type='video/mp4' />
+        </video>
+      </div >
     </>
   )
 }

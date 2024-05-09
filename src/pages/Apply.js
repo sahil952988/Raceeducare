@@ -5,6 +5,8 @@ import Mynooth from "../components/courses/Mynooth"
 import Dundalk from "../components/courses/Dundalk"
 import { toast } from "react-toastify"
 import axios from "axios"
+import Tus from "../components/courses/Tus"
+import bgvideo from "../Assets/Ireland  - The Making of  You.mp4"
 
 const Apply = () => {
 
@@ -53,101 +55,110 @@ const Apply = () => {
   return (
     <>
 
-      <div className="all_items">
-        <p className="text-center  text-white text-[40px] font-bold mt-10">Start Your Journey</p>
+      <div className="all_items ">
 
-        <form onSubmit={handleSubmit} className=" mt-5 space-y-4 bg-white mr-auto ml-auto w-fit px-10 py-10 rounded-[8px]">
+        <div className="form ">
+          <p className="text-center  text-white text-[40px] font-bold mt-10">Start Your Journey</p>
 
-          <div className="name & email md:flex md:space-x-5 mr-5">
-            <div className="name sm:pl-5">
-              <p>Full Name:</p>
-              <input required value={name} onChange={(e) => setName(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter name" />
+          <form onSubmit={handleSubmit} className=" mt-5 space-y-4 bg-white mr-auto ml-auto w-fit px-10 py-10 rounded-[8px]">
+
+            <div className="name & email md:flex md:space-x-5 mr-5">
+              <div className="name sm:pl-5">
+                <p>Full Name:</p>
+                <input required value={name} onChange={(e) => setName(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter name" />
+              </div>
+
+              <div className="email ">
+                <p>Email Address:</p>
+                <input required value={email} onChange={(e) => setEmail(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="email" placeholder="provide your email" />
+              </div>
             </div>
 
-            <div className="email ">
-              <p>Email Address:</p>
-              <input required value={email} onChange={(e) => setEmail(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="email" placeholder="provide your email" />
-            </div>
-          </div>
-
-          <div className="university & year md:flex md:mx-5 md:space-x-5">
-            <div className="number">
-              <p>Contact Number</p>
-              <input required value={phone} onChange={(e) => setPhone(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter a phone number" />
-            </div>
-            <div className="level">
-              <p>Education Level</p>
-              <select value={level} onChange={(e) => setLevel(e.target.value)} className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-                <option>level</option>
-                <option>Bachelors</option>
-                <option>Masters</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="intake & course  md:flex md:mx-5 md:space-x-5">
-            <div className="year">
-              <p>Preferred Year:</p>
-              <select value={year} onChange={(e) => setYear(e.target.value)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-                <option>Year</option>
-                <option>2024</option>
-                <option>2025</option>
-              </select>
+            <div className="university & year md:flex md:mx-5 md:space-x-5">
+              <div className="number">
+                <p>Contact Number</p>
+                <input required value={phone} onChange={(e) => setPhone(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter a phone number" />
+              </div>
+              <div className="level">
+                <p>Education Level</p>
+                <select value={level} onChange={(e) => setLevel(e.target.value)} className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+                  <option>level</option>
+                  <option>Bachelors</option>
+                  <option>Masters</option>
+                </select>
+              </div>
             </div>
 
-            <div className="intake">
-              <p>Preferred Intake:</p>
-              <select value={intake} onChange={(e) => setIntake(e.target.value)} className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-                <option>Intake</option>
-                <option>Feburary</option>
-                <option>September</option>
-              </select>
-            </div>
-          </div>
+            <div className="intake & course  md:flex md:mx-5 md:space-x-5">
+              <div className="year">
+                <p>Preferred Year:</p>
+                <select value={year} onChange={(e) => setYear(e.target.value)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+                  <option>Year</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                </select>
+              </div>
 
-          <div className="course md:flex md:mx-5 md:space-x-5">
-
-            <div value={university} onChange={(e) => setUniversity(e.target.value)} className="university">
-              <p>Preferred University:</p>
-              <select value={selected} onChange={(e) => handleChange(e)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-
-                <option onClick={() => setShow(true)} value="">University</option>
-                <option onClick={() => setShow(false)}>Independent College</option>
-                <option onClick={() => setShow(false)}>CCT college Dublin</option>
-                <option onClick={() => setShow(false)}>Maynooth University</option>
-                <option onClick={() => setShow(false)}>Dundalk Institute of Technology</option>
-              </select>
+              <div className="intake">
+                <p>Preferred Intake:</p>
+                <select value={intake} onChange={(e) => setIntake(e.target.value)} className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+                  <option>Intake</option>
+                  <option>Feburary</option>
+                  <option>September</option>
+                </select>
+              </div>
             </div>
 
-            <div className="course">
-              <p>Preferred Course:</p>
+            <div className="course md:flex md:mx-5 md:space-x-5">
 
-              {
-                show ?
-                  <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" name="" id="">
-                    <option value="">
-                      <h1>Course</h1>
-                    </option>
-                  </select>
-                  : null
-              }
-              <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "Independent College" ? <Independentcollege /> : ""}</div>
-              <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "CCT college Dublin" ? <CCTcollege /> : ""}</div>
+              <div value={university} onChange={(e) => setUniversity(e.target.value)} className="university">
+                <p>Preferred University:</p>
+                <select value={selected} onChange={(e) => handleChange(e)} className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
 
-              <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Maynooth University" ? <Mynooth /> : ""}</div>
+                  <option onClick={() => setShow(true)} value="">University</option>
+                  <option onClick={() => setShow(false)}>Independent College</option>
+                  <option onClick={() => setShow(false)}>CCT college Dublin</option>
+                  <option onClick={() => setShow(false)}>Maynooth University</option>
+                  <option onClick={() => setShow(false)}>Dundalk Institute of Technology</option>
+                  <option onClick={() => setShow(false)}>Technological University of the Shannon (TUS)</option>
+                </select>
+              </div>
 
-              <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Dundalk Institute of Technology" ? <Dundalk /> : ""}</div>
 
+              <div className="course">
+                <p>Preferred Course:</p>
+
+                {
+                  show ?
+                    <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" name="" id="">
+                      <option value="">
+                        <h1>Course</h1>
+                      </option>
+                    </select>
+                    : null
+                }
+                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "Independent College" ? <Independentcollege /> : ""}</div>
+                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "CCT college Dublin" ? <CCTcollege /> : ""}</div>
+
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Maynooth University" ? <Mynooth /> : ""}</div>
+
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Dundalk Institute of Technology" ? <Dundalk /> : ""}</div>
+
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Technological University of the Shannon (TUS)" ? <Tus /> : ""}</div>
+              </div>
             </div>
-          </div>
 
-          <div className="photo md:mx-5 mt-3 ">
-            <p>Upload file</p>
-            <input type="file" id="myFile" name="filename" />
-          </div>
+            <div className="photo md:mx-5 mt-3 ">
+              <p>Upload file</p>
+              <input type="file" id="myFile" name="filename" />
+            </div>
 
-          <button className="ml-5 mt-3 bg-green-500 px-3 py-2 rounded-[8px]">Submit</button>
-        </form>
+            <button className="ml-5 mt-3 bg-green-500 px-3 py-2 rounded-[8px]">Submit</button>
+          </form>
+        </div>
+        <video className='videoTag' autoPlay loop muted>
+          <source src={bgvideo} type='video/mp4' />
+        </video>
       </div>
     </>
   )
