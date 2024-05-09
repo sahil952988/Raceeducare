@@ -1,13 +1,14 @@
 import { useState } from "react"
-import Independentcollege from "../components/courses/PGCourse/Independentcollege"
-import CCTcollege from "../components/courses/PGCourse/CCtcollege"
-import Mynooth from "../components/courses/PGCourse/Mynooth"
-import Dundalk from "../components/courses/PGCourse/Dundalk"
-import TuDulin from "../components/courses/PGCourse/TuDulin"
 import { toast } from "react-toastify"
 import axios from "axios"
-import Tus from "../components/courses/PGCourse/Tus"
 import bgvideo from "../Assets/Ireland  - The Making of  You.mp4"
+import IndependentCollege from "../components/courses/IndependentCollege"
+import Maynooth from "../components/courses/Maynooth"
+import Dundalk from "../components/courses/Dundalk"
+import TuDulin from "../components/courses/TUDublin"
+import Tus from "../components/courses/Tus"
+import CCTcollege from "../components/courses/CCTcollege"
+
 
 
 const Apply = () => {
@@ -148,11 +149,11 @@ const Apply = () => {
                 }
 
 
-                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected === "Independent College" ? <Independentcollege /> : ""}</div>
+                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected === "Independent College" ? <IndependentCollege /> : ""}</div>
 
                 <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected === "CCT college Dublin" ? <CCTcollege /> : ""}</div>
 
-                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "Maynooth University" ? <Mynooth /> : ""}</div>
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "Maynooth University" ? <Maynooth /> : ""}</div>
 
                 <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "Dundalk Institute of Technology" ? <Dundalk /> : ""}</div>
 

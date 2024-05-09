@@ -147,7 +147,6 @@ const Tus = () => {
         <option>BSc (Hons)-Pharmacology </option>
         <option>BSc (Hons)-Agricultural Science and Sustainability</option>
 
-
         <option>BSc-Biotechnology </option>
         <option>BSc-Environmental Science and Climate </option>
         <option>BSc-Forensic & Pharmaceutical Science </option>

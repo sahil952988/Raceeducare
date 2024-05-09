@@ -1,4 +1,4 @@
-const Mynooth = () => {
+const Maynooth = () => {
   return (
     <>
       <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black">
@@ -22,4 +22,4 @@ const Mynooth = () => {
     </>
   )
 }
-export default Mynooth
+export default Maynooth

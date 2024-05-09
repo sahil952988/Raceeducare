@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Independentcollege = () => {
+const IndependentCollege = () => {
   return (
     <>
       <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
@@ -14,4 +14,4 @@ const Independentcollege = () => {
     </>
   )
 }
-export default Independentcollege
+export default IndependentCollege
