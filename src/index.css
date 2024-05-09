@@ -14,17 +14,11 @@
   font-style: normal;
 }
 
-/* body {
-  background-image: url('./Assets/logo2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 800px;
-} */
+
 
 video {
 
-  height: 100%;
+  height: 850px;
   width: 100%;
   object-fit: cover;
 }
@@ -36,11 +30,20 @@ video {
   transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 1270px) {
+
+  .left_side {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 
 ::placeholder {
   color: red;
   opacity: 1;
-  /* Firefox */
 }
 
 .form {

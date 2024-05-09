@@ -81,6 +81,10 @@ const Apply = () => {
                 <p>Contact Number</p>
                 <input required value={phone} onChange={(e) => setPhone(e.target.value)} className="sm:w-[300px] w-full border-[1px] border-black rounded-[4px] outline-none pl-5 py-3 text-black" type="text" placeholder="enter a phone number" />
               </div>
+
+
+
+
               <div className="level">
                 <p>Education Level</p>
                 <div value={level} onChange={(e) => setLevel(e.target.value)} >
@@ -154,7 +158,8 @@ const Apply = () => {
 
                 <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "Technological University of the Shannon (TUS)" ? <Tus /> : ""}</div>
 
-                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "TU Dublin" ? <TuDulin /> : ""}</div>
+                <div value={course} onChange={(e) => setCourse(e.target.value)}>
+                  {selected === "TU Dublin" ? <TuDulin /> : ""}</div>
               </div>
             </div>
 

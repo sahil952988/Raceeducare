@@ -9,7 +9,8 @@ const Home = () => {
     <>
 
       <div className=" items-center ">
-        <div className="left_side ml-5 mr-3  flex flex-col justify-center">
+
+        <div className="left_side  mr-3  flex flex-col justify-center">
           <Header />
           <p className='mt-10 text-[40px] font-bold  text-white text-center'>Our Website is coming Soon</p>
 
