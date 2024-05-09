@@ -1,12 +1,14 @@
 import { useState } from "react"
-import Independentcollege from "../components/courses/Independentcollege"
-import CCTcollege from "../components/courses/CCTcollege"
-import Mynooth from "../components/courses/Mynooth"
-import Dundalk from "../components/courses/Dundalk"
+import Independentcollege from "../components/courses/PGCourse/Independentcollege"
+import CCTcollege from "../components/courses/PGCourse/CCtcollege"
+import Mynooth from "../components/courses/PGCourse/Mynooth"
+import Dundalk from "../components/courses/PGCourse/Dundalk"
+import TuDulin from "../components/courses/PGCourse/TuDulin"
 import { toast } from "react-toastify"
 import axios from "axios"
-import Tus from "../components/courses/Tus"
+import Tus from "../components/courses/PGCourse/Tus"
 import bgvideo from "../Assets/Ireland  - The Making of  You.mp4"
+
 
 const Apply = () => {
 
@@ -81,11 +83,14 @@ const Apply = () => {
               </div>
               <div className="level">
                 <p>Education Level</p>
-                <select value={level} onChange={(e) => setLevel(e.target.value)} className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
-                  <option>level</option>
-                  <option>Bachelors</option>
-                  <option>Masters</option>
-                </select>
+                <div value={level} onChange={(e) => setLevel(e.target.value)} >
+                  <select value={selected} onChange={(e) => handleChange(e)}
+                    className=" border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" required>
+                    <option>level</option>
+                    <option>Bachelors</option>
+                    <option>Masters</option>
+                  </select>
+                </div>
               </div>
             </div>
 
@@ -121,13 +126,13 @@ const Apply = () => {
                   <option onClick={() => setShow(false)}>Maynooth University</option>
                   <option onClick={() => setShow(false)}>Dundalk Institute of Technology</option>
                   <option onClick={() => setShow(false)}>Technological University of the Shannon (TUS)</option>
+                  <option onClick={() => setShow(false)}>TU Dublin</option>
                 </select>
               </div>
 
 
               <div className="course">
                 <p>Preferred Course:</p>
-
                 {
                   show ?
                     <select className="border-[1px] border-black rounded-[4px] md:w-[300px] w-full outline-none pl-5 py-3 text-black" name="" id="">
@@ -137,14 +142,19 @@ const Apply = () => {
                     </select>
                     : null
                 }
-                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "Independent College" ? <Independentcollege /> : ""}</div>
-                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected == "CCT college Dublin" ? <CCTcollege /> : ""}</div>
 
-                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Maynooth University" ? <Mynooth /> : ""}</div>
 
-                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Dundalk Institute of Technology" ? <Dundalk /> : ""}</div>
+                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected === "Independent College" ? <Independentcollege /> : ""}</div>
 
-                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected == "Technological University of the Shannon (TUS)" ? <Tus /> : ""}</div>
+                <div value={course} onChange={(e) => setCourse(e.target.value)}>{selected === "CCT college Dublin" ? <CCTcollege /> : ""}</div>
+
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "Maynooth University" ? <Mynooth /> : ""}</div>
+
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "Dundalk Institute of Technology" ? <Dundalk /> : ""}</div>
+
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "Technological University of the Shannon (TUS)" ? <Tus /> : ""}</div>
+
+                <div value={course} onChange={(e) => setCourse(e.target.value)}> {selected === "TU Dublin" ? <TuDulin /> : ""}</div>
               </div>
             </div>
 
